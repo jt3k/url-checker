@@ -16,7 +16,7 @@ urlChecker(
 	'/a/b-lalala-d-lololo'
 );
 
-//=> {c: 'lalala', e: 'lololo'}
+// prints   {c: 'lalala', e: 'lololo'}
 ```
 
 
