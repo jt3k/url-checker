@@ -1,0 +1,30 @@
+{
+  "name": "url-checker",
+  "version": "0.0.0",
+  "description": "Tiny,, light-weight JavaScript routing with zero dependencies.",
+  "license": "MIT",
+  "repository": "jt3k/url-checker",
+  "author": {
+    "name": "Andrey Gurtovoy",
+    "email": "iyntx@ya.ru",
+    "url": "github.com/jt3k"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "xo && nyc ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "router for page"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "ava": "^0.17.0",
+    "nyc": "^10.0.0",
+    "xo": "^0.17.0"
+  }
+}
