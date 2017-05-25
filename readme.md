@@ -17,26 +17,27 @@ urlChecker({
 
 ## API
 
-### urlChecker(options, url)
+### urlChecker(routes, url)
 
-#### input
+#### routes
 
 Type: `object`
 
+```js
 {
 	'/category': variablesFromUrl => {},
 	'/category/page': variablesFromUrl => {},
 	'/category/page-{pageNumber}': variablesFromUrl => { /* here variablesFromUrl.pageNumber is 31337 */ },
 }
+```
 
-#### options
-
-##### foo
+#### url
 
 Type: `string`
 
+```
 /category/page-31337
-
+```
 
 ## License
 
