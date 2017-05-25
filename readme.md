@@ -8,9 +8,14 @@
 ```js
 const urlChecker = require('url-checker');
 
-urlChecker({
-	'/a/b-{c}-d-{e}': vars => { console.log(vars)}
-}, '/a/b-lalala-d-lololo');
+urlChecker(
+	{
+		'/a/b-{c}-d-{e}':  vars => console.log(vars),
+		'/about':          vars => console.log(vars),
+	},
+	'/a/b-lalala-d-lololo'
+);
+
 //=> {c: 'lalala', e: 'lololo'}
 ```
 
