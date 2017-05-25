@@ -1,12 +1,12 @@
 # url-checker [![Build Status](https://travis-ci.org/jt3k/url-checker.svg?branch=master)](https://travis-ci.org/jt3k/url-checker)
 
-> Tiny, fast, light-weight JavaScript routing with zero dependencies.
+> Tiny, light-weight JavaScript routing with zero dependencies.
 
 
 ## Usage
 
 ```js
-const urlChecker = require('url-checker');
+const urlChecker = require('url-checker'); // not now in npm, but u cat copy code from index.js is very-lightweight!
 
 urlChecker(
 	{
