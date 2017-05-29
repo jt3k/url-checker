@@ -20,22 +20,45 @@ import fn from '.';
 
 test('can match url', t => {
 	const routes = {
-		'/category': opt => {
-			t.pass(opt);
+		'/category'() {
+			t.pass();
 		}
 	};
 
 	fn(routes, '/category');
 });
 
-test('can match url /category/page', t => {
+test('can match url with params', t => {
 	const routes = {
-		'/category/page1': opt => {
-			t.pass(opt);
+		'/category-{cat}/page-{page}-with-{component}'(params) {
+			t.deepEqual(params, {
+				cat: '1',
+				page: '2',
+				component: '3'
+			});
 		}
 	};
 
-	fn(routes, '/category/page3');
+	fn(routes, '/category-1/page-2-with-3');
+});
+
+test('can can trig more than one urls', t => {
+	t.plan(2);
+	const routes = {
+		'/category-{cat}/page-{page}-with-{component}'(params) {
+			t.deepEqual(params, {
+				cat: '1',
+				page: '2',
+				component: '3'
+			});
+			t.pass();
+		},
+		'/category-123/page-456-with-769'() {
+			t.pass();
+		}
+	};
+
+	fn(routes, '/category-1/page-2-with-3');
 });
 
 // test('title', t => {
